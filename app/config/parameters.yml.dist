@@ -1,13 +1,13 @@
 parameters:
-    database_host:     127.0.0.1
+    database_host:     shhhtournq123.mysql.db	
     database_port:     ~
-    database_name:     cocorico_dev
-    database_user:     cocorico_dev
-    database_password: cocorico_dev
+    database_name:     shhhtournq123
+    database_user:     shhhtournq123
+    database_password: Couvou123
 
     #MongoDB
-    mongodb_server: mongodb://localhost:27017
-    mongodb_database_name: cocorico_dev
+    mongodb_server: mongodb://me:moi@ds161793.mlab.com:61793
+    mongodb_database_name: shhhtourm
 
     mailer_transport:  smtp
     mailer_host:       127.0.0.1
@@ -25,15 +25,15 @@ parameters:
     ### Cocorico environments dependant parameters (See CocoricoCoreBundle/Resources/config/parameters.yml) ###
 
     #Assets for emails
-    cocorico.assets_base_urls: https://cocorico.dev
+    cocorico.assets_base_urls: https://shhhtour.com
 
     #Request Context url for email send from command
-    router.request_context.host: cocorico.dev
+    router.request_context.host: shhhtour.com
     router.request_context.scheme: https
     router.request_context.base_url: ''
 
     #Admin access
-    cocorico.admin: admin
+    cocorico.admin: me
     #Admin Web JMS translations activation
     cocorico.admin_translation: false
 
@@ -41,8 +41,8 @@ parameters:
     cocorico.translator.secret.key: ~
 
     #Facebook
-    cocorico.facebook.app_id: ~
-    cocorico.facebook.secret: ~
+    cocorico.facebook.app_id: 731663666968594
+    cocorico.facebook.secret: d72fd809c3d15380514316bc81080bb1
 
     #Image processing driver (liip_imagine_bundle): (gd, imagick, gmagick)
     cocorico.image_driver: imagick

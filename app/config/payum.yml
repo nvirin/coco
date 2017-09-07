@@ -1,0 +1,129 @@
+container: 
+ parameters: 
+  parameter: 
+   _key: "payum.available_gateway_factories"
+   _type: collection
+ services: 
+  service: 
+   - 
+   _id: payum
+    _alias: "payum.static_registry"
+   - 
+   argument: 
+     - 
+   _type: collection
+     - 
+   _type: collection
+     - 
+   _type: collection
+    call: 
+     argument: 
+      _type: service
+      _id: service_container
+     _method: setContainer
+    _id: "payum.static_registry"
+    _class: "Payum\\Bundle\\PayumBundle\\Registry\\ContainerAwareRegistry"
+   - 
+   argument: 
+     - 
+   _type: collection
+     - 
+   _type: collection
+     - 
+   _type: collection
+    call: 
+     argument: 
+      _type: service
+      _id: service_container
+     _method: setContainer
+    _id: "payum.gateway_factory"
+    _class: "Payum\\Bundle\\PayumBundle\\GatewayFactory"
+   - 
+   call: 
+     argument: 200
+     _method: setTimeout
+    _id: "payum.buzz.client"
+    _class: "Buzz\\Client\\ClientInterface"
+    "_factory-class": "Payum\\Core\\Bridge\\Buzz\\ClientFactory"
+    "_factory-method": createCurl
+   - 
+   _id: "payum.iso4217"
+    _class: "Payum\\ISO4217\\ISO4217"
+   - 
+   _id: "payum.converter.reply_to_http_response"
+    _class: "Payum\\Core\\Bridge\\Symfony\\ReplyToSymfonyResponseConverter"
+   - 
+   argument: 
+     _type: service
+     _id: "payum.converter.reply_to_http_response"
+    tag: 
+     _name: "kernel.event_listener"
+     _event: "kernel.exception"
+     _method: onKernelException
+     _priority: 128
+    _id: "payum.listener.reply_to_http_response"
+    _class: "Payum\\Bundle\\PayumBundle\\EventListener\\ReplyToHttpResponseListener"
+   - 
+   argument: ""
+    _id: "payum.extension.storage.prototype"
+    _class: "Payum\\Core\\Extension\\StorageExtension"
+    _abstract: true
+    _public: false
+   - 
+   argument: 
+     _type: service
+     _id: logger
+     "_on-invalid": ignore
+    tag: 
+     _name: "payum.extension"
+     _all: true
+     _alias: psr_logger
+    _id: "payum.extension.logger"
+    _class: "Payum\\Core\\Bridge\\Psr\\Log\\LoggerExtension"
+   - 
+   argument: 
+     _type: service
+     _id: "payum.security.token_factory"
+    tag: 
+     _name: "payum.extension"
+     _all: true
+     _alias: token_factory
+    _id: "payum.extension.token_factory"
+    _class: "Payum\\Core\\Extension\\GenericTokenFactoryExtension"
+   - 
+   call: 
+     argument: 
+      _type: service
+      _id: request
+      "_on-invalid": null
+      _strict: false
+     _method: setHttpRequest
+    tag: 
+     _name: "payum.action"
+     _all: true
+     _alias: get_http_request
+    _id: "payum.action.get_http_request"
+    _class: "Payum\\Core\\Bridge\\Symfony\\Action\\GetHttpRequestAction"
+   - 
+   argument: 
+     - 
+   _type: service
+      _id: "form.factory"
+     - 
+   "%payum.template.obtain_credit_card%"
+    call: 
+     argument: 
+      _type: service
+      _id: request
+      "_on-invalid": null
+      _strict: false
+     _method: setRequest
+    tag: 
+     _name: "payum.action"
+     _all: true
+     _alias: obtain_credit_card
+    _id: "payum.action.obtain_credit_card"
+    _class: "Payum\\Core\\Bridge\\Symfony\\Action\\ObtainCreditCardAction"
+ _xmlns: "http://symfony.com/schema/dic/services"
+ "_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance"
+ "_xsi:schemaLocation": "http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd"

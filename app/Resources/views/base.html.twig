@@ -29,6 +29,37 @@
 
     <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
 
+   <!--  <link rel="stylesheet" href="https://shhhtour.com/web/css/all.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://shhhtour.com/web/css/all-override.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://shhhtour.com/web/css/vendor/bootstrap-multiselect.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://shhhtour.com/web/css/vendor/bootstrap-datetimepicker.css" type="text/css" media="all"> -->
+    <style type="text/css">
+
+
+body.loading {
+    overflow: auto;
+}
+
+@font-face {
+  font-family: 'fontello';
+  src: url('https://shhhtour.com/web/fonts/fontello.eot');
+  src: url('https://shhhtour.com/web/fonts/fontello.eot') format('embedded-opentype'),
+       url('https://shhhtour.com/web/fonts/fontello.woff') format('woff'),
+       url('https://shhhtour.com/web/fonts/fontello.ttf') format('truetype'),
+       url('https://shhhtour.com/web/fonts/fontello.svg') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+    </style>
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" media="all">
+  
+
     {% block stylesheets %}
         {% stylesheets
         'css/all.css'
@@ -36,7 +67,8 @@
         'css/vendor/bootstrap-multiselect.css'
         'css/vendor/bootstrap-datetimepicker.css'
 
-        filter='cssrewrite, ?minifycsscompressor' output='css/compiled/all.css' %}
+        filter='cssrewrite, ?minifycsscompressor' output='css/compiled/all.css' 
+        %}
         <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="all">
         {% endstylesheets %}
     {% endblock %}
@@ -136,6 +168,16 @@
     <script type="text/javascript">
         $.fn.modal || document.write('<script src="{{ asset('js/vendor/bootstrap.min.js') }}"><\/script>');
     </script>
+
+    <!-- <script type="text/javascript" src="https://shhhtour.com/web/js/vendor/bootstrap-multiselect.js"></script>
+   //  <script type="text/javascript" src="https://shhhtour.com/web/js/vendor/jquery.carouFredSel.min.js"></script>
+   //  <script type="text/javascript" src="https://shhhtour.com/web/js/vendor/jquery.cookie.js"></script>
+   //  <script type="text/javascript" src="https://shhhtour.com/web/js/common.js"></script>
+   //  <script type="text/javascript" src="https://shhhtour.com/web/js/vendor/json2.js"></script>
+   //  <script type="text/javascript" src="https://shhhtour.com/web/js/jquery.main.js"></script>
+   //  <script type="text/javascript" src="https://shhhtour.com/web/js/jquery.main-override.js"></script>
+   //  <script type="text/javascript" src="https://shhhtour.com/web/js/vendor/parsley.min.js"></script>
+   //  <script type="text/javascript" src="https://shhhtour.com/web/js/vendor/bootstrap-datetimepicker.js"></script> -->
 
     {% javascripts
     'js/vendor/bootstrap-multiselect.js'

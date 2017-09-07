@@ -1,3 +1,18 @@
+
+# payum_sync:
+#     resource: "@PayumBundle/Resources/config/routing/sync.xml"
+# payum_refund:
+#     resource: "@PayumBundle/Resources/config/routing/refund.xml"
+# payum_capture:
+#     resource: "@PayumBundle/Resources/config/routing/capture.xml"
+# payum_authorize:
+#     resource: "@PayumBundle/Resources/config/routing/authorize.xml"
+# payum_notify:
+#     resource: "@PayumBundle/Resources/config/routing/notify.xml"
+acme_hello:
+    resource: "@AcmeHelloBundle/Resources/config/routing.yml"
+    prefix:   /
+
 cocorico_core:
     resource: "@CocoricoCoreBundle/Resources/config/routing.yml"
 
@@ -23,3 +38,11 @@ cocorico_geo:
 cocorico_extra_bundle:
     resource: .
     type: extra_bundle
+
+# sonata_block:
+#     default_contexts: [cms]
+#     blocks:
+
+#         # enable the SonataAdminBundle block
+#         sonata.admin.block.admin_list:
+#             contexts:   [admin]

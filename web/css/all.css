@@ -14033,6 +14033,8 @@ h1.listing-title a {
 .jcf-checkbox.jcf-checked span {
     opacity: 1;
     filter: alpha(opacity=100);
+        background: #020000;
+    border: 1px solid #d3d3d3;
 }
 
 /* custom radio styles */
@@ -17553,7 +17555,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 }
 
 body.loading {
-    overflow: hidden;
+    overflow: auto;
 }
 
 .loader {

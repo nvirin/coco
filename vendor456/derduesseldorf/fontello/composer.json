@@ -1,0 +1,23 @@
+{
+    "name": "derduesseldorf/fontello",
+    "description": "fontello api package for laravel 4.x",
+    "authors": [
+        {
+            "name": "Derduesseldorf",
+            "email": "rheingestalter@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.0",
+        "illuminate/support": "4.1.*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/migrations"
+        ],
+        "psr-4": {
+            "Derduesseldorf\\Fontello\\": "src"
+        }
+    },
+    "minimum-stability": "stable"
+}

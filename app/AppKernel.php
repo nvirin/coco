@@ -10,6 +10,7 @@ class AppKernel extends Kernel
     public function registerBundles()
     {
         $bundles = array(
+
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
             new Symfony\Bundle\TwigBundle\TwigBundle(),
@@ -56,13 +57,24 @@ class AppKernel extends Kernel
             new Cocorico\ContactBundle\CocoricoContactBundle(),
             new Cocorico\ReviewBundle\CocoricoReviewBundle(),
             new Cocorico\ConfigBundle\CocoricoConfigBundle(),
-        );
+//new Cache\CacheBundle\CacheBundle(),
+            new Acme\HelloBundle\AcmeHelloBundle(),
+		//new Payum\Bundle\PayumBundle\PayumBundle(),
+
+            new AcmePaymentBundle\AcmePaymentBundle(),
+        ); 
 
         if (in_array($this->getEnvironment(), array('dev', 'test', 'staging'), true)) {
             $bundles[] = new Symfony\Bundle\WebProfilerBundle\WebProfilerBundle();
             $bundles[] = new Sensio\Bundle\DistributionBundle\SensioDistributionBundle();
             $bundles[] = new Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle();
             $bundles[] = new Hpatoio\DeployBundle\DeployBundle();
+// $bundles[] = new \JS\MysqlndBundle\JSMysqlndBundle();
+	    
+
+
+
+
         }
 
 

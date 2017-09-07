@@ -93,9 +93,9 @@ class GoogleMapsProvider extends GoogleMaps
         }
 
         // you are over your quota
-        if ('OVER_QUERY_LIMIT' === $json->status) {
-            throw new QuotaExceeded(sprintf('Daily quota exceeded %s', $query));
-        }
+        // if ('OVER_QUERY_LIMIT' === $json->status) {
+        //     throw new QuotaExceeded(sprintf('Daily quota exceeded %s', $query));
+        // }
 
         // no result
         if (!isset($json->results) || !count($json->results) || 'OK' !== $json->status) {

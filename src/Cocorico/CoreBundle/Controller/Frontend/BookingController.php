@@ -22,6 +22,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\RedirectResponse;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Debug\Debug;
 
 /**
  * Booking controller.
@@ -69,6 +70,7 @@ class BookingController extends Controller
         \DateTime $start_time,
         \DateTime $end_time
     ) {
+        //Debug::enable();
         $dispatcher = $this->get('event_dispatcher');
         $session = $this->container->get('session');
         $translator = $this->container->get('translator');

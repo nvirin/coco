@@ -1,0 +1,47 @@
+# This file is auto-generated during the composer install
+parameters:
+    database_host: shhhtournq123.mysql.db
+    database_port: null
+    database_name: shhhtournq123
+    database_user: shhhtournq123
+    database_password: Couvou123
+    mongodb_server: 'mongodb://me:moi@ds161793.mlab.com:61793/shhhtourm'
+    mongodb_database_name: shhhtourm
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    mailer_port: null
+    secret: jfguidhfjkhjghfgkuhfdhjktjdfuj
+    use_assetic_controller: false
+    cocorico.assets_base_urls: 'https://shhhtour.com/web'
+    router.request_context.host: shhhtour.com
+    router.request_context.scheme: https
+    router.request_context.base_url: 'https://shhhtour.com/web'
+    cocorico.admin: admin
+    cocorico.admin_translation: false
+    cocorico.translator.secret.key: null
+    cocorico.facebook.app_id: '731663666968594'
+    cocorico.facebook.secret: d72fd809c3d15380514316bc81080bb1
+    cocorico.image_driver: imagick
+    cocorico.google_analytics: UA-64445856-1
+    cocorico.google_tag_manager: false
+    cocorico_geo.google_place_api_key: AIzaSyBN2icByxdoYQ2ULv1zu36LZPEZIFcLh1s
+    cocorico_geo.google_place_server_api_key: AIzaSyBN2icByxdoYQ2ULv1zu36LZPEZIFcLh1s
+    cocorico_geo.ipinfodb_api_key: null
+    cocorico.deploy.host: fake.cocorico.prod
+    cocorico.deploy.dir: /fake/path
+    cocorico.deploy.user: fakeuser
+    cocorico.booking.expiration_delay: 2880
+    cocorico.booking.alert_expiration_delay: 120
+    cocorico.booking.alert_imminent_delay: 1440
+    cocorico.booking.validated_moment: start
+    cocorico.booking.validated_delay: 0
+    cocorico.bankwire_checking_simulation: false
+    cocorico_sms.enabled: false
+    cocorico_sms.ovh_endpoint_name: ovh-eu
+    cocorico_sms.ovh_application_key: 'Application Key'
+    cocorico_sms.ovh_application_secret: 'Application Secret'
+    cocorico_sms.ovh_consumer_key: 'Consumer Key'
+    cocorico_sms.ovh_service_name: 'Service Name'
+    cocorico_sms.ovh_debug: false

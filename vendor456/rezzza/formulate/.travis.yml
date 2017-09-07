@@ -1,0 +1,20 @@
+language: php
+
+dist: trusty
+sudo: false
+
+php:
+    - 5.3
+    - 5.4
+    - 5.6
+    - 7.0
+
+before_script:
+    - composer install --optimize-autoloader --prefer-dist
+
+script:
+    - bin/atoum -ulr
+
+notifications:
+    email:
+        - ci@verylastroom.com

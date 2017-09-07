@@ -10,6 +10,19 @@ imports:
     - { resource: @CocoricoPageBundle/Resources/config/config.yml}
     - { resource: @CocoricoConfigBundle/Resources/config/config.yml}
 
+# payum:
+#     security:
+#         token_storage:
+#             Acme\PaymentBundle\Entity\PaymentToken: { doctrine: orm }
+
+    # storages:
+    #     Acme\PaymentBundle\Entity\Payment: { doctrine: orm }
+            
+    # gateways:
+    #     offline:
+            # factory: offline
+   
+
 framework:
     #esi:             ~
     translator:      { fallback: "%cocorico.locale%" }
@@ -45,9 +58,8 @@ twig:
 # Assetic Configuration
 assetic:
     debug:          "%kernel.debug%"
-    use_controller:
-        enabled:    false
-
+    use_controller: "%kernel.debug%"
+       
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
